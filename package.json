@@ -10,6 +10,9 @@
   "author": "kratik agrawal",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.3",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.1"
   }
