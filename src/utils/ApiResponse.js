@@ -7,3 +7,9 @@ class ApiResponse{
     }
 }
 export {ApiResponse}
+
+/* 
+ApiResponse is a custom response class used to standardize success responses from the API.
+It wraps the actual data along with status code, message, and success flag.
+This ensures consistency across all APIs and simplifies frontend handling.
+*/
