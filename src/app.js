@@ -19,7 +19,14 @@ app.use(
   }),
 );
 app.use(express.static("public"));
-app.use(cookieParser);
+app.use(cookieParser());
+
+app.get("/test", (req, res) => {
+  res.status(200).json({
+    message: "Server is working fine 🚀"
+  });
+  console.log('server hits')
+});
 
 //routes import
 import userRouter from "./routes/user.routes.js";

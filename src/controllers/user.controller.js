@@ -14,7 +14,8 @@ const registerUser = asyncHandler(async (req, res) => {
   //remove password and refresh token field from response
   //check for user creation
   //return res
-
+  console.log("BODY:", req.body);
+  console.log("FILES:", req.files);
   const { fullName, email, username, password } = req.body;
   console.log("email :", email);
   console.log("fullName :", fullName);
@@ -37,8 +38,9 @@ const registerUser = asyncHandler(async (req, res) => {
     );
   }
 
-  const avatarLocalPath = req.files?.avatar[0]?.path;
-  const coverImageLocalPath = req.files?.coverImage[0]?.path;
+  const avatarLocalPath = req.files?.avatar?.[0]?.path;
+  // ✅ safe optional chaining — coverImage is not required
+  const coverImageLocalPath = req.files?.coverImage?.[0]?.path;
 
   if (!avatarLocalPath) {
     throw new ApiError(400, "Avatar file is must");
