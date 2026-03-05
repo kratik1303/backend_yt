@@ -4,9 +4,9 @@
   "description": "a backend project",
   "main": "index.js",
   "type": "module",
- "scripts": {
-  "dev": "nodemon src/index.js"
-},
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
   "author": "kratik agrawal",
   "license": "ISC",
   "dependencies": {
